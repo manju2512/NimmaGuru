@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/tvGuruName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guru Name"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#1A5276"
+            android:layout_marginBottom="6dp"/>
+
+        <TextView
+            android:id="@+id/tvGuruSkills"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skills: Math, Science"
+            android:textSize="15sp"
+            android:textColor="#2874A6"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/tvGuruVillage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Village: Bengaluru"
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/tvGuruPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone: 9999999999"
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/tvGuruHours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hours: Saturdays 10am-12pm"
+            android:textSize="14sp"
+            android:textColor="#27AE60"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
