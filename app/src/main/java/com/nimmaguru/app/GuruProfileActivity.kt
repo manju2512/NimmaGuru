@@ -14,7 +14,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 
-class GuruProfileActivity : AppCompatActivity() {
+class GuruProfileActivity : BaseActivity() {
 
     private lateinit var etName: TextInputEditText
     private lateinit var etVillage: TextInputEditText
@@ -100,30 +100,33 @@ class GuruProfileActivity : AppCompatActivity() {
         btnSave.text = "Saving..."
 
         val db = FirebaseDatabase.getInstance(dbUrl).reference
-        val guruData = hashMapOf(
+
+        // ✅ Use explicit String values only — no Long, no nested HashMap
+        val skillsList = skills.values.joinToString(",")
+
+        val guruData = hashMapOf<String, String>(
             "name"      to name,
             "village"   to village,
             "phone"     to phone,
             "freeHours" to freeHours,
-            "skills"    to skills,
-            "timestamp" to System.currentTimeMillis()
+            "skills"    to skillsList
         )
 
-        Log.d("GURU_SAVE", "Pushing data to /gurus...")
+        Log.d("GURU_SAVE", "Saving guru: $guruData")
 
         db.child("gurus").push().setValue(guruData)
             .addOnCompleteListener { task ->
                 btnSave.isEnabled = true
                 btnSave.text = "Save Profile"
-                
+
                 if (task.isSuccessful) {
-                    Log.d("GURU_SAVE", "Successfully saved!")
-                    Toast.makeText(this, "Profile Saved!", Toast.LENGTH_SHORT).show()
+                    Log.d("GURU_SAVE", "Saved successfully!")
+                    Toast.makeText(this, "✅ Profile Saved!", Toast.LENGTH_LONG).show()
                     finish()
                 } else {
                     val error = task.exception?.message ?: "Unknown error"
-                    Log.e("GURU_SAVE", "Save Failed: $error")
-                    Toast.makeText(this, "Error: $error", Toast.LENGTH_LONG).show()
+                    Log.e("GURU_SAVE", "Failed: $error")
+                    Toast.makeText(this, "❌ $error", Toast.LENGTH_LONG).show()
                 }
             }
     }

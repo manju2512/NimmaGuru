@@ -11,7 +11,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to NimmaGuru"
+        android:text="@string/home_welcome"
         android:textSize="26sp"
         android:textStyle="bold"
         android:textColor="#1A5276"
@@ -20,22 +20,33 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Connecting Gurus with Students"
+        android:text="@string/home_subtitle"
         android:textSize="15sp"
         android:textColor="#2874A6"
         android:gravity="center"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="40dp"/>
 
+    <!-- Register Button -->
     <Button
         android:id="@+id/btnRegisterGuru"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:text="Register as Guru"
+        android:text="@string/home_register_btn"
         android:textSize="16sp"
         android:textStyle="bold"
         android:backgroundTint="#1A5276"
         android:textColor="#FFFFFF"
         android:layout_marginBottom="16dp"/>
+
+    <!-- Language Toggle Button -->
+    <Button
+        android:id="@+id/btnLanguage"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Switch to ಕನ್ನಡ"
+        android:textSize="15sp"
+        android:backgroundTint="#2874A6"
+        android:textColor="#FFFFFF"/>
 
 </LinearLayout>
