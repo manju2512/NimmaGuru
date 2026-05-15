@@ -168,7 +168,7 @@ appreciations/
 ## Step 1 — Clone Repository
 
 ```bash
-git clone https://github.com/your-username/nimma-guru.git
+git clone https://github.com/manju2512/nimma-guru.git
 ```
 
 ---
@@ -231,27 +231,14 @@ db.child("test")
 
 # 📸 Screenshots
 
-## Suggested Screenshots to Add
-
 * Home Screen
 * Guru Registration Screen
 * Student Search Screen
 * Wall of Fame
 * Firebase Database Screenshot
 
-Create a folder:
+**Note: See the Screenshots folder
 
-```text
-/screenshots
-```
-
-Then include images like:
-
-```md
-![Home Screen](screenshots/home.png)
-```
-
----
 
 # 🚀 Future Improvements
 
@@ -307,6 +294,7 @@ Important files included:
 * google-services.json
 * AndroidManifest.xml
 
+**Note: Observe "Build.gradle.kts" for full dependency file
 ---
 
 # 📈 Development Progress
