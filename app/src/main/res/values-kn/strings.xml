@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App -->
+    <string name="app_name">ನಿಮ್ಮ ಗುರು</string>
+
+    <!-- Bottom Navigation -->
+    <string name="nav_home">ಮನೆ</string>
+    <string name="nav_search">ಹುಡುಕಿ</string>
+    <string name="nav_calendar">ಕ್ಯಾಲೆಂಡರ್</string>
+    <string name="nav_appreciate">ಧನ್ಯವಾದ</string>
+
+    <!-- Home Screen -->
+    <string name="home_welcome">ನಿಮ್ಮ ಗುರುಗೆ ಸ್ವಾಗತ</string>
+    <string name="home_subtitle">ಗುರುಗಳನ್ನು ವಿದ್ಯಾರ್ಥಿಗಳೊಂದಿಗೆ ಸಂಪರ್ಕಿಸುತ್ತಿದೆ</string>
+    <string name="home_register_btn">ಗುರುವಾಗಿ ನೋಂದಾಯಿಸಿ</string>
+
+    <!-- Guru Profile -->
+    <string name="profile_title">ಗುರು ಪ್ರೊಫೈಲ್</string>
+    <string name="profile_subtitle">ಸ್ವಯಂಸೇವಕ ಶಿಕ್ಷಕರಾಗಿ ನೋಂದಾಯಿಸಿ</string>
+    <string name="profile_name">ಪೂರ್ಣ ಹೆಸರು *</string>
+    <string name="profile_village">ಗ್ರಾಮ / ಪ್ರದೇಶ *</string>
+    <string name="profile_phone">ಫೋನ್ ಸಂಖ್ಯೆ *</string>
+    <string name="profile_hours">ಲಭ್ಯ ಸಮಯ</string>
+    <string name="profile_skills">ನಿಮ್ಮ ಕೌಶಲ್ಯ ಆಯ್ಕೆಮಾಡಿ *</string>
+    <string name="profile_save_btn">ಪ್ರೊಫೈಲ್ ಉಳಿಸಿ</string>
+    <string name="profile_saving">ಉಳಿಸಲಾಗುತ್ತಿದೆ...</string>
+    <string name="profile_saved">ಪ್ರೊಫೈಲ್ ಉಳಿಸಲಾಗಿದೆ!</string>
+    <string name="profile_fill_fields">ದಯವಿಟ್ಟು ಎಲ್ಲಾ ಅಗತ್ಯ ಕ್ಷೇತ್ರಗಳನ್ನು ಭರ್ತಿ ಮಾಡಿ</string>
+    <string name="profile_select_skill">ಕನಿಷ್ಠ ಒಂದು ಕೌಶಲ್ಯ ಆಯ್ಕೆ ಮಾಡಿ</string>
+
+    <!-- Skills -->
+    <string name="skill_math">ಗಣಿತ</string>
+    <string name="skill_science">ವಿಜ್ಞಾನ</string>
+    <string name="skill_english">ಇಂಗ್ಲಿಷ್</string>
+    <string name="skill_kannada">ಕನ್ನಡ</string>
+    <string name="skill_carpentry">ಮರಗೆಲಸ</string>
+    <string name="skill_computer">ಕಂಪ್ಯೂಟರ್</string>
+    <string name="skill_agriculture">ಕೃಷಿ</string>
+    <string name="skill_music">ಸಂಗೀತ</string>
+
+    <!-- Search Screen -->
+    <string name="search_title">ಗುರುವನ್ನು ಹುಡುಕಿ</string>
+    <string name="search_hint">ಹೆಸರು ಅಥವಾ ಗ್ರಾಮದಿಂದ ಹುಡುಕಿ...</string>
+    <string name="search_all">ಎಲ್ಲಾ</string>
+
+    <!-- Calendar Screen -->
+    <string name="calendar_title">ತರಗತಿ ಕ್ಯಾಲೆಂಡರ್</string>
+    <string name="calendar_no_sessions">ಈ ದಿನಾಂಕದಂದು ಯಾವುದೇ ಅಧಿವೇಶನಗಳಿಲ್ಲ</string>
+    <string name="calendar_sessions_on">ಅಧಿವೇಶನಗಳು: </string>
+
+    <!-- Appreciation Screen -->
+    <string name="appreciate_title">ಪ್ರಶಂಸೆ ಫಲಕ</string>
+    <string name="appreciate_subtitle">ವಿದ್ಯಾರ್ಥಿಗಳಿಂದ ಧನ್ಯವಾದ ಟಿಪ್ಪಣಿಗಳು</string>
+    <string name="appreciate_dialog_title">ಧನ್ಯವಾದ ಟಿಪ್ಪಣಿ ಪೋಸ್ಟ್ ಮಾಡಿ</string>
+    <string name="appreciate_your_name">ನಿಮ್ಮ ಹೆಸರು</string>
+    <string name="appreciate_select_guru">ಗುರುವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ</string>
+    <string name="appreciate_message">ನಿಮ್ಮ ಸಂದೇಶ</string>
+    <string name="appreciate_post_btn">ಪೋಸ್ಟ್ ಮಾಡಿ</string>
+    <string name="appreciate_cancel">ರದ್ದುಮಾಡಿ</string>
+    <string name="appreciate_posted">ಧನ್ಯವಾದ ಟಿಪ್ಪಣಿ ಪೋಸ್ಟ್ ಆಗಿದೆ!</string>
+    <string name="appreciate_fill_fields">ದಯವಿಟ್ಟು ಎಲ್ಲಾ ಕ್ಷೇತ್ರಗಳನ್ನು ಭರ್ತಿ ಮಾಡಿ</string>
+</resources>
