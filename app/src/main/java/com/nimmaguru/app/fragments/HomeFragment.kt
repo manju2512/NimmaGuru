@@ -37,8 +37,12 @@ class HomeFragment : Fragment() {
         btnLanguage.setOnClickListener {
             val newLang = if (currentLang == "en") "kn" else "en"
             LocaleHelper.setLocale(requireContext(), newLang)
-            // Restart MainActivity to apply language
-            (requireActivity() as MainActivity).restartActivity()
+            LocaleHelper.setLocale(requireActivity(), newLang)
+
+            // Full restart to apply language everywhere
+            val intent = requireActivity().intent
+            requireActivity().finish()
+            requireActivity().startActivity(intent)
         }
 
         return view

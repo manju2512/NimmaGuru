@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Find a Guru"
+        android:text="@string/search_title"
         android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="#1A5276"
@@ -20,7 +20,7 @@
         android:id="@+id/etSearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Search by name or village..."
+        android:hint="@string/search_hint"
         android:textSize="16sp"
         android:padding="12dp"
         android:layout_marginStart="16dp"
