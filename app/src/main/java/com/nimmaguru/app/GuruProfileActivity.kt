@@ -88,11 +88,15 @@ class GuruProfileActivity : BaseActivity() {
         val skills    = getSelectedSkills()
 
         if (name.isEmpty() || village.isEmpty() || phone.isEmpty()) {
-            Toast.makeText(this, "Please fill required fields", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,
+                getString(R.string.profile_fill_fields),
+                Toast.LENGTH_SHORT).show()
             return
         }
         if (skills.isEmpty()) {
-            Toast.makeText(this, "Select at least one skill", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,
+                getString(R.string.profile_select_skill),
+                Toast.LENGTH_SHORT).show()
             return
         }
 

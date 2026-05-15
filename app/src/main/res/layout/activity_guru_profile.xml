@@ -12,22 +12,37 @@
         android:orientation="vertical"
         android:padding="20dp">
 
+        <!-- Title -->
         <TextView
+            android:id="@+id/tvProfileTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Guru Profile"
+            android:text="@string/profile_title"
             android:textSize="28sp"
             android:textStyle="bold"
             android:textColor="#1A5276"
             android:gravity="center"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/tvProfileSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/profile_subtitle"
+            android:textSize="14sp"
+            android:textColor="#2874A6"
+            android:gravity="center"
             android:layout_marginBottom="24dp"/>
 
+        <!-- Name -->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:hint="Full Name *"
+            android:hint="@string/profile_name"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etName"
                 android:layout_width="match_parent"
@@ -35,12 +50,14 @@
                 android:textSize="18sp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- Village -->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:hint="Village / Area *"
+            android:hint="@string/profile_village"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etVillage"
                 android:layout_width="match_parent"
@@ -48,12 +65,14 @@
                 android:textSize="18sp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- Phone -->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:hint="Phone Number *"
+            android:hint="@string/profile_phone"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etPhone"
                 android:layout_width="match_parent"
@@ -62,12 +81,14 @@
                 android:textSize="18sp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- Free Hours -->
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:hint="Available Hours"
+            android:hint="@string/profile_hours"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etFreeHours"
                 android:layout_width="match_parent"
@@ -75,15 +96,18 @@
                 android:textSize="18sp"/>
         </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- Skills Label -->
         <TextView
+            android:id="@+id/tvSkillsLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Select Your Skills *"
+            android:text="@string/profile_skills"
             android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="#1A5276"
             android:layout_marginBottom="10dp"/>
 
+        <!-- Skills -->
         <com.google.android.material.chip.ChipGroup
             android:id="@+id/chipGroupSkills"
             android:layout_width="match_parent"
@@ -140,11 +164,12 @@
 
         </com.google.android.material.chip.ChipGroup>
 
+        <!-- Save Button -->
         <Button
             android:id="@+id/btnSave"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:text="Save Profile"
+            android:text="@string/profile_save_btn"
             android:textSize="18sp"
             android:textStyle="bold"
             android:backgroundTint="#1A5276"
@@ -152,4 +177,5 @@
             android:layout_marginBottom="16dp"/>
 
     </LinearLayout>
+
 </ScrollView>

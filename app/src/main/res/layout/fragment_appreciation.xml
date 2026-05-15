@@ -13,6 +13,7 @@
 
         <!-- Title -->
         <TextView
+            android:id="@+id/tvAppreciateTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/appreciate_title"
@@ -21,7 +22,9 @@
             android:textColor="#1A5276"
             android:padding="16dp"/>
 
+        <!-- Subtitle -->
         <TextView
+            android:id="@+id/tvAppreciateSubtitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/appreciate_subtitle"
@@ -30,6 +33,42 @@
             android:paddingStart="16dp"
             android:paddingEnd="16dp"
             android:paddingBottom="12dp"/>
+
+        <!-- Wall of Fame Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🏆 Wall of Fame"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#1A5276"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp"/>
+
+        <!-- Wall of Fame -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:id="@+id/wallOfFameLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"/>
+
+        </HorizontalScrollView>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DDDDDD"
+            android:layout_marginBottom="8dp"/>
 
         <!-- Notes List -->
         <androidx.recyclerview.widget.RecyclerView

@@ -54,7 +54,11 @@ class SearchFragment : Fragment() {
         FirebaseRepository.getGurus { firebaseGurus ->
             if (firebaseGurus.isNotEmpty()) {
                 allGurus = firebaseGurus.toMutableList()
-                filteredList = allGurus.toMutableList()
+            } else {
+                allGurus = sampleGurus.toMutableList()
+            }
+            filteredList = allGurus.toMutableList()
+            requireActivity().runOnUiThread {
                 adapter.updateList(filteredList)
             }
         }
@@ -81,8 +85,13 @@ class SearchFragment : Fragment() {
             val matchSearch = searchText.isEmpty()
                     || guru.name.lowercase().contains(searchText)
                     || guru.village.lowercase().contains(searchText)
-            val matchSkill = selectedSkill == "All"
-                    || guru.skills.any { it.equals(selectedSkill, ignoreCase = true) }
+
+            // ✅ Handle both List and comma-separated string skills
+            val matchSkill = selectedSkill == "All" || run {
+                val skillStr = guru.skills.joinToString(",").lowercase()
+                skillStr.contains(selectedSkill.lowercase())
+            }
+
             matchSearch && matchSkill
         }.toMutableList()
 
