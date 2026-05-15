@@ -7,31 +7,29 @@ import java.util.Locale
 
 object LocaleHelper {
 
-    private const val PREF_NAME = "NimmaGuruPrefs"
-    private const val KEY_LANGUAGE = "selected_language"
+    private const val PREF_NAME  = "NimmaGuruPrefs"
+    private const val KEY_LANG   = "selected_language"
 
-    fun setLocale(context: Context, languageCode: String): Context {
-        saveLanguage(context, languageCode)
-        return updateResources(context, languageCode)
+    fun setLocale(context: Context, lang: String) {
+        persist(context, lang)
+        applyLocale(context, lang)
     }
 
     fun getSavedLanguage(context: Context): String {
-        val prefs: SharedPreferences =
-            context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
-        return prefs.getString(KEY_LANGUAGE, "en") ?: "en"
+        val prefs = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
+        return prefs.getString(KEY_LANG, "en") ?: "en"
     }
 
-    private fun saveLanguage(context: Context, languageCode: String) {
-        val prefs: SharedPreferences =
-            context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
-        prefs.edit().putString(KEY_LANGUAGE, languageCode).apply()
-    }
-
-    private fun updateResources(context: Context, languageCode: String): Context {
-        val locale = Locale(languageCode)
+    fun applyLocale(context: Context, lang: String) {
+        val locale = Locale(lang)
         Locale.setDefault(locale)
         val config = Configuration(context.resources.configuration)
         config.setLocale(locale)
-        return context.createConfigurationContext(config)
+        context.resources.updateConfiguration(config, context.resources.displayMetrics)
+    }
+
+    private fun persist(context: Context, lang: String) {
+        val prefs = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
+        prefs.edit().putString(KEY_LANG, lang).apply()
     }
 }

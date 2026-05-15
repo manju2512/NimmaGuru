@@ -21,30 +21,36 @@ class HomeFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
 
-        val btnRegisterGuru  = view.findViewById<Button>(R.id.btnRegisterGuru)
-        val btnLanguage      = view.findViewById<Button>(R.id.btnLanguage)
+        val btnRegisterGuru = view.findViewById<Button>(R.id.btnRegisterGuru)
+        val btnLanguage     = view.findViewById<Button>(R.id.btnLanguage)
 
-        // Set button label based on current language
         val currentLang = LocaleHelper.getSavedLanguage(requireContext())
-        btnLanguage.text = if (currentLang == "en") "Switch to ಕನ್ನಡ" else "Switch to English"
+        updateLanguageButton(btnLanguage, currentLang)
 
-        // Open Guru Profile
         btnRegisterGuru.setOnClickListener {
             startActivity(Intent(requireContext(), GuruProfileActivity::class.java))
         }
 
-        // Switch Language
         btnLanguage.setOnClickListener {
             val newLang = if (currentLang == "en") "kn" else "en"
-            LocaleHelper.setLocale(requireContext(), newLang)
-            LocaleHelper.setLocale(requireActivity(), newLang)
 
-            // Full restart to apply language everywhere
-            val intent = requireActivity().intent
+            // Apply and save language
+            LocaleHelper.setLocale(requireContext(), newLang)
+
+            // Full app restart
+            val intent = Intent(requireActivity(), MainActivity::class.java)
+            intent.addFlags(
+                Intent.FLAG_ACTIVITY_CLEAR_TASK or
+                        Intent.FLAG_ACTIVITY_NEW_TASK
+            )
+            startActivity(intent)
             requireActivity().finish()
-            requireActivity().startActivity(intent)
         }
 
         return view
+    }
+
+    private fun updateLanguageButton(btn: Button, lang: String) {
+        btn.text = if (lang == "en") "Switch to ಕನ್ನಡ" else "Switch to English"
     }
 }
