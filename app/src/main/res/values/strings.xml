@@ -1,3 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- App -->
     <string name="app_name">NimmaGuru</string>
+
+    <!-- Bottom Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_search">Search</string>
+    <string name="nav_calendar">Calendar</string>
+    <string name="nav_appreciate">Appreciate</string>
+
+    <!-- Home Screen -->
+    <string name="home_welcome">Welcome to NimmaGuru</string>
+    <string name="home_subtitle">Connecting Gurus with Students</string>
+    <string name="home_register_btn">Register as Guru</string>
+
+    <!-- Guru Profile -->
+    <string name="profile_title">Guru Profile</string>
+    <string name="profile_subtitle">Register as a Volunteer Teacher</string>
+    <string name="profile_name">Full Name *</string>
+    <string name="profile_village">Village / Area *</string>
+    <string name="profile_phone">Phone Number *</string>
+    <string name="profile_hours">Available Hours</string>
+    <string name="profile_skills">Select Your Skills *</string>
+    <string name="profile_save_btn">Save Profile</string>
+    <string name="profile_saving">Saving…</string>
+    <string name="profile_saved">Profile Saved!</string>
+    <string name="profile_fill_fields">Please fill required fields</string>
+    <string name="profile_select_skill">Select at least one skill</string>
+
+    <!-- Skills -->
+    <string name="skill_math">Mathematics</string>
+    <string name="skill_science">Science</string>
+    <string name="skill_english">English</string>
+    <string name="skill_kannada">Kannada</string>
+    <string name="skill_carpentry">Carpentry</string>
+    <string name="skill_computer">Computer</string>
+    <string name="skill_agriculture">Agriculture</string>
+    <string name="skill_music">Music</string>
+
+    <!-- Search Screen -->
+    <string name="search_title">Find a Guru</string>
+    <string name="search_hint">Search by name or village…</string>
+    <string name="search_all">All</string>
+
+    <!-- Calendar Screen -->
+    <string name="calendar_title">Class Calendar</string>
+    <string name="calendar_no_sessions">No sessions scheduled for this date</string>
+    <string name="calendar_sessions_on">Sessions on: </string>
+
+    <!-- Appreciation Screen -->
+    <string name="appreciate_title">Appreciation Board</string>
+    <string name="appreciate_subtitle">Thank You Notes from Students</string>
+    <string name="appreciate_dialog_title">Post Thank You Note</string>
+    <string name="appreciate_your_name">Your Name</string>
+    <string name="appreciate_select_guru">Select Guru</string>
+    <string name="appreciate_message">Your Message</string>
+    <string name="appreciate_post_btn">Post</string>
+    <string name="appreciate_cancel">Cancel</string>
+    <string name="appreciate_posted">Thank You note posted!</string>
+    <string name="appreciate_fill_fields">Please fill all fields</string>
 </resources>
