@@ -23,7 +23,7 @@ class GuruProfileActivity : BaseActivity() {
     private lateinit var chipGroupSkills: ChipGroup
     private lateinit var btnSave: Button
 
-    private val dbUrl = "https://nimmaguru-7d920-default-rtdb.asia-southeast1.firebasedatabase.app"
+    private val dbUrl = "url of ur firebase instance"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
