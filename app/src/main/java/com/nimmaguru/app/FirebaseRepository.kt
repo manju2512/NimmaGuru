@@ -10,7 +10,7 @@ import com.google.firebase.database.ValueEventListener
 object FirebaseRepository {
 
     private val db = FirebaseDatabase
-        .getInstance("https://nimmaguru-7d920-default-rtdb.asia-southeast1.firebasedatabase.app")
+        .getInstance("url of firebase instance")
         .reference
 
     // ─── GURUS ───────────────────────────────────────────
